@@ -12,8 +12,13 @@ type ColorsConfig struct {
 	Rows []*ColorRow `hcl:"color,block"`
 }
 
+type ScreensConfig struct {
+	Screens map[string]string `hcl:"sizes"`
+}
+
 type Config struct {
-	Colors ColorsConfig `hcl:"Colors,block"`
+	Colors  ColorsConfig  `hcl:"Colors,block"`
+	Screens ScreensConfig `hcl:"Screens,block"`
 }
 
 func LoadConfig() (*Config, error) {

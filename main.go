@@ -21,5 +21,5 @@ func main() {
 		d := mod.Generate(config)
 		doc.Consume(&d)
 	}
-	print(doc.String())
+	print(doc.String(config))
 }
